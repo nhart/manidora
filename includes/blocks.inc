@@ -359,7 +359,7 @@ function __manidora_whats_new_content(){
   }
   $count = 0;
   while ($count < 4) {
-    $query = 'dc.title:[ * TO * ]';
+    $query = 'dc.title:[ * TO * ] AND -PID:"nagios:check_all"';
     $params = array(
       'fl' => 'PID,dc.title,timestamp,fedora_datastreams_ms,RELS_EXT_canSeeRestricted_uri_ms,RELS_EXT_restrictedState_literal_ms', 
       'sort' => 'timestamp desc', 
